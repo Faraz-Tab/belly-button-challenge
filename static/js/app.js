@@ -6,7 +6,10 @@ const url = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/
 const dataPromise = d3.json(url);
 dataPromise.then(data => console.log(data))
 
+
+// initializing the init() function to start the page
 init();
+
 
 // adding the values of our dataset to our dropdownMenu by creating a division
 // named option and giving it our dataset id names with a for loop
@@ -25,8 +28,8 @@ dataPromise.then(function (data) {
 
 })
 
-// initializing the init() function which is shown when the
-// page is open by giving it the values of our first data 
+// creating the init() function wich starts the page with the 
+// first data of dataset 
 function init() {
     var number = 0;
     barPlot(number);
