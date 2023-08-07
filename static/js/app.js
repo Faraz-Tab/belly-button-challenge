@@ -25,8 +25,6 @@ dataPromise.then(function (data) {
 
 })
 
-let hhh = dataPromise.then(data => data.Object);
-
 // initializing the init() function which is shown when the
 // page is open by giving it the values of our first data 
 function init() {
@@ -123,7 +121,8 @@ function optionChanged() {
             if (data.names[i] == dataset){
                 data_number = i;
             }
-        }
+        };
+    console.log(`Test Subject ID No changed to: ${data.names[data_number]}`);
     updatePlots(data_number);
 })
 }
@@ -141,8 +140,10 @@ function updatePlots(n) {
         d3.selectAll('br').remove();
     })
     dataPanelDisplay(n);
+    console.log("Info updated")
+}
 
-    {// Please read!
+// Please read!
     // !!!!!!!!!
     // WE CAN ALSO USE Plotly.restyle() TO CHANGE OUR PLOTS
     // I HAVE PUT THE CODE FOR THE BAR PLOT AS AN EXAMPLE 
@@ -163,6 +164,4 @@ function updatePlots(n) {
     // dataPromise.then(function(data){
     //     // let x = 
     // });
-    // 
-};
-}
+    
